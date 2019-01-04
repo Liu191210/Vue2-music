@@ -25,7 +25,7 @@
 
 - 音乐自动切换的时候报: Uncaught (in promise) DOMException: The play() request was interrupted by a new load request
 - 数据返回正确但读取错误: 专辑图片/歌曲 读取错误   // 已做处理
-- 不是从列表里进入歌曲详情不能拖动歌曲进度条。。。。。😂
+- 部分歌曲无法拖动歌曲进度条。。。。。😂
 - 歌词是 啊~~ 或喔~~ 是空的，有些歌曲的歌词是“//”
 - 进入songDetails是播放数据为空报错，并且下次有值也不会渲染   // 已知触发条件coogle手机模拟器进入该页面在刷新 
 
