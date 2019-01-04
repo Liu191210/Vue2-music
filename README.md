@@ -18,7 +18,7 @@
 
 - [x] 音乐详情页
 - [x] 歌词映射
-- [ ] jsonp跨域(jquery跨域请求)/原生创建script模拟jsonp跨域成功但是报错
+- [ ] jsonp跨域,原生创建script模拟jsonp跨域成功但是报错
 
 ##  已知错误
 
