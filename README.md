@@ -6,7 +6,7 @@
 3. [mint-ui（饿了么移动端UI库）](http://mint-ui.github.io/docs/#/zh-cn2)
 4. [amfe-flexible（淘宝适配库）](https://github.com/amfe/lib-flexible)
 7. [ES6/7（JS语法）](https://github.com/lukehoban/es6features)
-8. [ESlint（JS语法规范）](https://github.com/standard/standard/blob/master/docs/RULES-zhcn.md)  // 我跪了
+8. [ESlint（JS语法规范）](https://github.com/standard/standard/blob/master/docs/RULES-zhcn.md)  // 我跪了 自带的我也不想啊
 8. [less（css预处理器）](https://github.com/less/less-docs)
 
 ## 提示
