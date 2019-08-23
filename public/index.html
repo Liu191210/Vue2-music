@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="shortcut icon" href="<%= BASE_URL %>favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.0/lib/index.css">
+    <script src="<%= BASE_URL %>index.js"></script>
+    <link rel="stylesheet" href="<%= BASE_URL %>index.css">
+  </head>
+  <body>
+    <% for (let i of htmlWebpackPlugin.options.srcipt) { %>
+      <script src="<%= i %>"></script>
+    <% } %>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

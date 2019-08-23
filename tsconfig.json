@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    // 默认路径, 必要！
+    "baseUrl": ".", 
+    // 指定js目标版本 最新
+    "target": "esnext",
+    // 采用的模块系统 
+    "module": "esnext",
+    // 决定如何处理模块。
+    "moduleResolution": "node",
+    // 启用所有严格类型检查选项
+    "strict": true,
+    // 不允许switch的case语句贯穿
+    "noFallthroughCasesInSwitch": true,
+    // 允许使用提案语法
+    "experimentalDecorators": true,
+    // 允许从没有设置默认导出的模块中默认导入 => import * as xxx from "xxx"
+    "esModuleInterop": true,
+    // 允许从没有设置默认导出的模块中默认导入
+    "allowSyntheticDefaultImports": true,
+     // 在表达式和声明上有隐含的any类型时报错
+    "noImplicitAny": true,
+    "types": [ // 只有被列出来的包才会被包含进来
+      "webpack-env",
+      "node"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [ // 要包含在编译中的库文件列表。
+      "dom",
+      "es2015"
+    ]
+  },
+  "include": [
+    "src/*.ts",
+    "src/*.vue",
+    "src/**/*.ts",
+    "src//**/*.vue"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

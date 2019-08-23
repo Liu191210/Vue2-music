@@ -1,61 +1,44 @@
-#  Music(模拟QQ音乐)
+# vue3重构vue2-qq-music
+
+###  本实例只是用来开发玩玩，第一次踩ts的坑
 
 ## 技术栈
-1. [vue](https://cn.vuejs.org/v2/guide/)、 [vue-router](https://router.vuejs.org/zh-cn/essentials/getting-started.html)、 [vuex](https://vuex.vuejs.org/zh-cn/getting-started.html)
+1. [vue-cli](https://cli.vuejs.org/zh/)、[vue-router](https://router.vuejs.org/zh-cn/essentials/getting-started.html)、 [vuex](https://vuex.vuejs.org/zh-cn/getting-started.html)
 2. [axios（请求库）](https://github.com/axios/axios)
-3. [mint-ui（饿了么移动端UI库）](http://mint-ui.github.io/docs/#/zh-cn2)
-4. [amfe-flexible（淘宝适配库）](https://github.com/amfe/lib-flexible)
-7. [ES6/7（JS语法）](https://github.com/lukehoban/es6features)
-8. [ESlint（JS语法规范）](https://github.com/standard/standard/blob/master/docs/RULES-zhcn.md)  // 我跪了 自带的我也不想啊
+3. [Vant（轻量、可靠的移动端 Vue 组件库,支持ts）](https://youzan.github.io/vant/#/zh-CN/intro)
+7. [typeScript (语法为es6/7)](https://www.tslang.cn/)
 8. [less（css预处理器）](https://github.com/less/less-docs)
 
-## 提示
-
-- 在谷歌浏览器后面添加 --args --disable-web-security --user-data-dir 并重启
-
-
-##  待添加功能/页面
-
-- [x] 音乐详情页
-- [x] 歌词映射
-- [ ] jsonp跨域,原生创建script模拟jsonp跨域成功但是报错
-- [ ] 推荐页面只能看ps：没找到电台api/热门歌单api
-
-##  已知错误
-
-- 音乐自动切换的时候报: Uncaught (in promise) DOMException: The play() request was interrupted by a new load request
-- 数据返回正确但读取错误: 专辑图片/歌曲 读取错误   // 已做处理
-- 部分歌曲无法拖动歌曲进度条。。。。。😂
-- 歌词是 啊~~ 或喔~~ 是空的，有些歌曲的歌词是“//”
-- 进入songDetails是播放数据为空报错，并且下次有值也不会渲染   // 已知触发条件coogle手机模拟器进入该页面在刷新，或关闭在进入
 
 ## 目录结构
 
 ``` bash
-├── src                          
+├── public
+├── src
 │   ├── assets                   // 静态资源
-│   |   ├── css                  // css重置bootstrap4.0整理下来的
+│   |   ├── css                  // css
 │   |   ├── images               // 图片
-│   |   ├── js                   // 淘宝rem适配库
+│   |   ├── ts                   // 一些js => mixins
 │   ├── components               // 全局组件
-│   |   |── header               // 头部导航
-│   |   |── music                // 播放器
-│   |   |── song                 // 播放歌单  
-│   |   |—— songDetails          // 歌曲详情
-│   ├── page                   
-│   |   ├── home                 // 主页
-│   |   ├── ranking              // 排行榜
-│   |   ├── search               // 搜索框
+│   ├── views                    // page
+│   ├── request                  // 用Promise封装的aoios
 │   ├── router                   // 路由
 │   ├── store                    // 状态管理
-│   ├── utils                   
-│   |   ├── api.js               // 请求api
-│   |   ├── request.js           // 请求方法配置
+│   ├── types                    // ts、vue模块补充
 │   ├── App.vue
-│   └── main.js                   // 项目依赖
-├── package.json                 
-└── vue.config.js               
+│   └── main.js                  // 项目依赖
+├── .env                         // 环境配置文件              
+├── tsconfig.json                // ts配置  
+└── vue.config                   // vue 全局配置
 ```
+
+## 待改进和待添加
+
+* 复用details组件
+* 把一些页面上的东西封装成组件
+* history模式刷新404 ----> 替换成hast模式
+* 主页热门歌单or电台没有
+
 
 ## 安装运行
 
@@ -63,12 +46,16 @@
 # 安装依赖
 npm install
 
-# 启动项目
-npm run dev
+# 启动项目(默认环境)
+npm run serve 
 
 # 运行
-http://localhost:8080
+http://localhost:7777
 
 # 打包项目
 npm run build
 ```
+
+## 其他声明
+
+* 一些API来源于(https://github.com/messoer)
